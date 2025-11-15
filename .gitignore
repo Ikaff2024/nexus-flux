@@ -1,0 +1,40 @@
+# .gitignore for Nexus-Flux
+
+# ------------------------------
+# Python
+# ------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# Logs
+logs/
+*.log
+
+# Cache
+.cache/
+pytest_cache/
+
+# IDE configs
+.vscode/
+.idea/
+
+# Environment files (do not commit)
+.env
+
+# OS-generated files
+.DS_Store
+Thumbs.db

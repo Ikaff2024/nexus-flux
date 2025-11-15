@@ -1,0 +1,65 @@
+# pyproject.toml for Nexus-Flux
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "nexus-flux"
+version = "1.0.0"
+description = "A next-generation cognitive multi-agent engine based on holographic shared-state architecture."
+readme = "README.md"
+authors = [
+  { name = "YEO Kaffanan Issa", email = "contact@ikaffanan.com" }
+]
+license = { file = "LICENSE.md" }
+requires-python = ">=3.10"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+# Core dependencies
+dependencies = [
+  "numpy",
+  "pydantic",
+  "pydantic-settings",
+  "python-dotenv",
+  "openai",
+  "aiohttp",
+  "fastapi",
+  "uvicorn[standard]",
+  "typer[all]",
+  "redis",
+  "structlog"
+]
+
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "pytest-asyncio"
+]
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.setuptools]
+include-package-data = true
+
+
+# Console script entrypoints
+[project.scripts]
+nexus-flux = "src.cli:app"
+
+
+# Tool configuration examples (optional)
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"

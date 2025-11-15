@@ -1,0 +1,21 @@
+# MANIFEST.in — Include essential project files in the package
+
+include README.md
+include LICENSE.md
+include CONTRIBUTING.md
+include CODE_OF_CONDUCT.md
+include SECURITY.md
+include overview.md
+include requirements.txt
+include .env.example
+
+recursive-include src *
+recursive-include tests *
+recursive-include docs *
+
+# Exclude unnecessary files
+prune .vscode
+prune .idea
+prune build
+prune dist
+prune *.egg-info

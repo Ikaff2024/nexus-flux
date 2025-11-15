@@ -1,0 +1,16 @@
+# Requirements for Nexus-Flux
+
+```
+numpy
+pydantic
+pydantic-settings
+python-dotenv
+openai
+aiohttp
+fastapi
+uvicorn[standard]
+typer[all]
+redis
+structlog
+pytest
+pytest-asyncio
