@@ -1,0 +1,51 @@
+# Auteur : YEO Kaffanan Issa
+# Organisation mainteneuse : IKAFFANAN LTD
+
+# ---------------------------
+# Python
+# ---------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build / Distribution
+build/
+dist/
+*.spec
+
+# ---------------------------
+# Environnements / Secrets
+# ---------------------------
+.env
+.env.*
+!.env.example
+
+# ---------------------------
+# Logs
+# ---------------------------
+*.log
+logs/
+execution_log.jsonl
+
+# ---------------------------
+# IDE / Éditeurs
+# ---------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---------------------------
+# Tests / Cache
+# ---------------------------
+pytest_cache/
+.cache/
