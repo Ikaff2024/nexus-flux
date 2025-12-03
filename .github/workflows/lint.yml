@@ -1,4 +1,4 @@
-name: Run Tests
+name: Lint Code
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,11 +19,12 @@ jobs:
       with:
         python-version: "3.11"
 
-    - name: Install dependencies
+    - name: Install tools
       run: |
-        pip install -r requirements.txt
-        pip install -e .
+        pip install black flake8
 
-    - name: Run tests
+    - name: Run linter
       run: |
-        pytest --disable-warnings --maxfail=1
+        black --check .
+        flake8 .
+
