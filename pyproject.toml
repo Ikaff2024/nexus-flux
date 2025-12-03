@@ -1,0 +1,89 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nexus-flux"
+version = "1.0.0"
+description = "NEXUS-FLUX — A Non-Anthropomorphic Collective Intelligence Engine (Open-source safe version)"
+readme = "README.md"
+authors = [
+    { name="YEO Kaffanan Issa", email="contact@ikaffanan.com" },
+]
+license = { file = "LICENSE.md" }
+requires-python = ">=3.10"
+keywords = ["AI", "multi-agent", "cognitive engine", "vector consensus", "collective intelligence"]
+
+# Dépendances Python
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "redis",
+    "typer",
+    "python-dotenv",
+    "pytest",
+    "openai",     # utilisé si LLM_API_KEY est fournie
+]
+
+# Où se trouve ton code ?
+# Racine du package = src/
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# Inclure les fichiers du MANIFEST.in
+[tool.setuptools]
+include-package-data = true
+
+# Classifiers PyPI
+[project.classifiers]
+"Programming Language :: Python :: 3.10" = true
+"Programming Language :: Python :: 3.11" = true
+"License :: OSI Approved :: MIT License" = true
+"Operating System :: OS Independent" = true
+"Intended Audience :: Developers" = true
+"Topic :: Scientific/Engineering :: Artificial Intelligence" = true
+"Topic :: Software Development :: Libraries" = true
+
+
+####################################################
+#   SECTION OPTIONNELLE (recommandée)
+####################################################
+
+[project.urls]
+"Homepage" = "https://github.com/<ton-compte>/nexus-flux"
+"Documentation" = "https://github.com/<ton-compte>/nexus-flux/tree/main/docs"
+"Issues" = "https://github.com/<ton-compte>/nexus-flux/issues"
+"Source" = "https://github.com/<ton-compte>/nexus-flux"
+
+
+####################################################
+#   CONFIGURATION BLACK (facultative)
+####################################################
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+
+####################################################
+#   CONFIGURATION FLAKE8 (facultative)
+####################################################
+
+[tool.flake8]
+max-line-length = 88
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+
+####################################################
+#   CONFIGURATION PYTEST
+####################################################
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
