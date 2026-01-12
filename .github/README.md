@@ -5,3 +5,4 @@ Ce dossier contient :
 - templates de pull requests
 - workflows CI/CD
 - règles de sécurité
+Open-Core vs Research / Enterprise Edition
