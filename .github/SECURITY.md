@@ -10,7 +10,7 @@ Mises à jour de sécurité fournies selon disponibilité.
 
 Si vous découvrez une faille, contactez :
 
-📧 **ikaffanan@gmail.com**
+📧 **research@nexus-flux.com**
 
 Inclure :
 - description du problème  
@@ -24,4 +24,5 @@ Inclure :
 - ne pas publier `.env`  
 - ne pas partager de clés API  
 - utiliser le backend Redis sécurisé en production  
+
 - préférer HTTPS  
